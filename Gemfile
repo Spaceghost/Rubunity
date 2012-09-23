@@ -4,9 +4,31 @@ gem 'rails', '3.2.8'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'decent_exposure'
+gem 'mongoid', '~> 3.0.0'
+gem 'devise'
+gem 'haml'
 
+group :development do
+  gem 'haml-rails'
+  gem 'cucumber-rails'
+end
 
+group :test do
+  gem 'launchy'
+end
 
+group :development, :test do
+  gem 'mongoid-rspec'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'mocha'
+  gem 'ffaker'
+  gem 'rspec-rails'
+  gem 'pry'
+  gem 'pry-stack_explorer'
+  gem 'shoulda-matchers'
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
